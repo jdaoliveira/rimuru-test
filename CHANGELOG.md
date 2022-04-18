@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/jdaoliveira/rimuru-test/compare/v1.3.1...v1.4.0) (2022-04-18)
+
+
+### Features
+
+* **package:** add coverage ([5b8a26a](https://github.com/jdaoliveira/rimuru-test/commit/5b8a26acfa8730625df6bb8409b14f0889565159))
+
 ## [1.3.1](https://github.com/jdaoliveira/rimuru-test/compare/v1.3.0...v1.3.1) (2022-04-18)
 
 
