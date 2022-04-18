@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/jdaoliveira/rimuru-test/compare/v1.4.0...v1.4.1) (2022-04-18)
+
+
+### Bug Fixes
+
+* **coverage:** coverage ([a7fc265](https://github.com/jdaoliveira/rimuru-test/commit/a7fc26535b5566a8d398972c1f758dfb6dc0e10d))
+
 # [1.4.0](https://github.com/jdaoliveira/rimuru-test/compare/v1.3.1...v1.4.0) (2022-04-18)
 
 
