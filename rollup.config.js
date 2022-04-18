@@ -26,7 +26,7 @@ function getPackageJson() {
 
 	return {
 		PROJECT_NAME: packageJson.name,
-		VERSION: packageJson.version,
+		VERSION: process.env.NODE_VERSION,
 		AUTHOR_NAME: packageJson.author,
 		LICENSE: packageJson.license
 	}
