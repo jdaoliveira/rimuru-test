@@ -2,14 +2,19 @@
   "name": "rimuru-test",
   "version": "0.0.0-development",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "unpkg": "./umd/rimuru-test.production.min.js",
+  "files": [
+	"dist"
+  ],
   "scripts": {
     "commit": "git add . && git-cz",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
     "semantic-release": "semantic-release --branches master"
   },
-  "files": ["dist"],
   "repository": {
     "type": "git",
     "url": "https://github.com/jdaoliveira/rimuru-test.git"
