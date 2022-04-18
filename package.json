@@ -10,7 +10,7 @@
     "dist"
   ],
   "scripts": {
-    "commit": "git add . && git-cz",
+    "commit": "git pull && git add . && git-cz",
     "test": "jest",
     "build": "rollup -c",
     "semantic-release": "semantic-release --branches master"
