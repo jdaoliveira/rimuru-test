@@ -4,6 +4,7 @@ import dts from "rollup-plugin-dts";
 import size from 'rollup-plugin-size';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
+import { name, author, license } from './package.json';
 
 const external = ["react"];
 const globals = { react: "React" }
@@ -20,29 +21,36 @@ function createBanner(libraryName, version, authorName, license) {
  * @license ${license}
  */`;
 }
+function capitalizeFirstLetter(string) {
+	return string.charAt(0).toUpperCase() + string.slice(1);
+}
+function getName() {
+	const arr = name.split('/');
 
-function getPackageJson() {
-	const packageJson = require(`./package.json`);
-
-	return {
-		PROJECT_NAME: packageJson.name,
-		VERSION: process.env.NODE_VERSION,
-		AUTHOR_NAME: packageJson.author,
-		LICENSE: packageJson.license
-	}
+	return arr[arr.length - 1];
 }
 
-const {
-	PROJECT_NAME, VERSION, AUTHOR_NAME, LICENSE
-} = getPackageJson();
-
+/**
+ * Package Json info
+ */
+const PROJECT_NAME = getName()
+const VERSION = process.env.PROJECT_VERSION;
+const AUTHOR_NAME = author;
+const LICENSE = license;
+/**
+ * Folders
+ */
 const SOURCE_INDEX_FILE = `./src/index.ts`;
 const OUTPUT_DIR = "./dist";
 const CJS_DIR = `${OUTPUT_DIR}/cjs`;
 const UMD_DIR = `${OUTPUT_DIR}/umd`;
-const filename = "rimuru-best";
+/**
+ * Options
+ */
+const filename = PROJECT_NAME;
 const sourcemap = true;
 const banner = createBanner(PROJECT_NAME, VERSION, AUTHOR_NAME, LICENSE);
+const umdName = PROJECT_NAME.split('-').map(capitalizeFirstLetter).join('')
 
 const defaultExtPlugin = [
 	size(),
@@ -171,7 +179,7 @@ const umdModules = [
 			sourcemap,
 			banner: banner,
 			globals,
-			name: "ReactRouter",
+			name: umdName,
 		},
 		external,
 		plugins: [
@@ -201,7 +209,7 @@ const umdModules = [
 			sourcemap,
 			banner: banner,
 			globals,
-			name: "ReactRouter",
+			name: umdName,
 		},
 		external,
 		plugins: [

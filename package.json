@@ -11,8 +11,6 @@
   ],
   "scripts": {
     "commit": "git add . && git-cz",
-    "test1": "node ./scripts/test.js",
-    "test2": "npx semantic-release --dry-run --branch \"$( git rev-parse --abbrev-ref HEAD )\" --no ci",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
     "semantic-release": "semantic-release --branches master"
@@ -38,6 +36,8 @@
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
+    "@size-limit/preset-small-lib": "^7.0.8",
+    "@size-limit/time": "^7.0.8",
     "babel-plugin-dev-expression": "^0.2.3",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
@@ -54,5 +54,11 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "size-limit": [
+    {
+      "path": "./dist/index.js",
+      "limit": "500 ms"
+    }
+  ]
 }
