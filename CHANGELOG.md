@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/jdaoliveira/rimuru-test/compare/v1.4.2...v1.4.3) (2022-04-18)
+
+
+### Bug Fixes
+
+* **test:** test ([97ede8e](https://github.com/jdaoliveira/rimuru-test/commit/97ede8e05ca7831ffe7d9564d98c57c69547b02d))
+
 ## [1.4.2](https://github.com/jdaoliveira/rimuru-test/compare/v1.4.1...v1.4.2) (2022-04-18)
 
 
