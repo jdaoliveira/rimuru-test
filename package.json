@@ -11,6 +11,8 @@
   ],
   "scripts": {
     "commit": "git add . && git-cz",
+    "test1": "node ./scripts/test.js",
+    "test2": "npx semantic-release --dry-run --branch \"$( git rev-parse --abbrev-ref HEAD )\" --no ci",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
     "semantic-release": "semantic-release --branches master"
@@ -37,6 +39,7 @@
     "@semantic-release/git": "^10.0.1",
     "babel-plugin-dev-expression": "^0.2.3",
     "cz-conventional-changelog": "^3.3.0",
+    "dotenv": "^16.0.0",
     "rollup": "^2.70.2",
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-dts": "^4.2.1",

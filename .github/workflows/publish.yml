@@ -41,8 +41,6 @@ jobs:
         cache: 'npm'
     - name: Install dependencies
       run: npm ci
-    - name: Build
-      run: npm run build --if-present
     - name: Publish
       run: npm run semantic-release
       env:
