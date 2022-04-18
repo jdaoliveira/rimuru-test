@@ -11,4 +11,3 @@ jobs:
         steps:
             - uses: actions/checkout@v1
             - uses: ArtiomTr/jest-coverage-report-action@v2
-            - run: npm run test
