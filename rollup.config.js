@@ -1,9 +1,9 @@
 import { babel } from "@rollup/plugin-babel";
-import { terser } from "rollup-plugin-terser";
-import dts from "rollup-plugin-dts";
-import size from 'rollup-plugin-size';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
+import flatDts from "rollup-plugin-flat-dts";
+import size from 'rollup-plugin-size';
+import { terser } from "rollup-plugin-terser";
 import { name, author, license } from './package.json';
 
 const external = ["react"];
@@ -68,6 +68,14 @@ const modules = [
 			format: "esm",
 			sourcemap,
 			banner: banner,
+			plugins: [
+				// TODO: Check in the future for a better solution
+				// This package serves to create a single index.d.ts
+				// Wrapped into declare module 
+				flatDts({
+					moduleName: PROJECT_NAME
+				})
+			]
 		},
 		external,
 		plugins: [

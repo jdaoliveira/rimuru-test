@@ -11,9 +11,11 @@
   ],
   "scripts": {
     "commit": "git pull && git add . && git-cz",
-    "test": "jest",
     "build": "rollup -c",
-    "semantic-release": "semantic-release --branches master"
+    "semantic-release": "semantic-release --branches master",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
@@ -38,11 +40,12 @@
     "@semantic-release/git": "^10.0.1",
     "@size-limit/preset-small-lib": "^7.0.8",
     "@size-limit/time": "^7.0.8",
+    "@testing-library/jest-dom": "^5.16.4",
     "@types/jest": "^27.4.1",
     "babel-plugin-dev-expression": "^0.2.3",
+    "c8": "^7.11.0",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
-    "dotenv": "^16.0.0",
     "jest": "^27.5.1",
     "rollup": "^2.70.2",
     "rollup-plugin-cleaner": "^1.0.0",
@@ -50,7 +53,11 @@
     "rollup-plugin-size": "^0.2.2",
     "rollup-plugin-terser": "^7.0.2",
     "semantic-release": "^19.0.2",
-    "typescript": "^4.6.3"
+    "typescript": "^4.6.3",
+    "vite": "^2.9.5",
+    "vite-plugin-checker": "^0.4.6",
+    "vite-tsconfig-paths": "^3.4.1",
+    "vitest": "^0.9.3"
   },
   "config": {
     "commitizen": {
