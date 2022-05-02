@@ -13,13 +13,11 @@
     "src/packages/*"
   ],
   "scripts": {
-    "commit": "git pull && git add . && git-cz",
     "build": "rollup -c",
     "semantic-release": "semantic-release --branches master",
     "test": "vitest run",
     "test:watch": "vitest",
-    "coverage": "vitest run --coverage",
-	"multi-semantic-release": "multi-semantic-release --branches master"
+    "coverage": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
