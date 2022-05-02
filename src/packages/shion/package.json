@@ -1,11 +1,11 @@
 {
-  "name": "rimuru-test",
-  "version": "1.4.4",
+  "name": "shion-test",
+  "version": "0.0.0-development",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "unpkg": "./dist/umd/rimuru-test.production.min.js",
+  "unpkg": "./dist/umd/shion-test.production.min.js",
   "files": [
     "dist"
   ],
@@ -18,8 +18,7 @@
     "semantic-release": "semantic-release --branches master",
     "test": "vitest run",
     "test:watch": "vitest",
-    "coverage": "vitest run --coverage",
-	"multi-semantic-release": "multi-semantic-release --branches master"
+    "coverage": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
