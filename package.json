@@ -18,6 +18,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "coverage": "vitest run --coverage",
+    "semantic-release": "semantic-release --branches master",
     "publish": "npm run publish:shion && npm run publish:rimuru",
     "publish:shion": "cd ./src/packages/shion && npm run publish",
     "publish:rimuru": "cd ./src/packages/rimuru && npm run publish"
