@@ -18,8 +18,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "coverage": "vitest run --coverage",
-	"publish": "npm run publish:shion && npm run publish:rimuru",
-	"publish:shion": "cd ./src/packages/shion && npm run publish",
+    "publish": "npm run publish:shion && npm run publish:rimuru",
+    "publish:shion": "cd ./src/packages/shion && npm run publish",
     "publish:rimuru": "cd ./src/packages/rimuru && npm run publish"
   },
   "repository": {
@@ -43,8 +43,6 @@
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@size-limit/preset-small-lib": "^7.0.8",
-    "@size-limit/time": "^7.0.8",
     "@testing-library/jest-dom": "^5.16.4",
     "@types/jest": "^27.4.1",
     "babel-plugin-dev-expression": "^0.2.3",
@@ -52,7 +50,6 @@
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "jest": "^27.5.1",
-    "multi-semantic-release": "^2.12.0",
     "rollup": "^2.70.2",
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-dts": "^4.2.1",
