@@ -17,7 +17,7 @@
 	[
         "@semantic-release/exec",
 		{
-			"prepareCmd": "npm run public"
+			"prepareCmd": "npm run publish"
 		}
     ],
 	"@semantic-release/github",
