@@ -42,7 +42,6 @@ const getPackage = (
 
 	packageJSON.version = VERSION;
 
-	// Update Version
 	fs.writeFileSync(PACKAGE_JSON, JSON.stringify(packageJSON, null, 4), 'utf-8');
 
 	const { name, author, license } = packageJSON;
