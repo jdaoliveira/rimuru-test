@@ -1,6 +1,6 @@
 {
   "name": "rimuru-test",
-  "version": "1.4.4",
+  "version": "0.0.0-development",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -18,8 +18,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "coverage": "vitest run --coverage",
-    "semantic-release": "semantic-release --branches master",
-    "publish": "npm run publish:shion && npm run publish:rimuru",
+    "semantic-release": "semantic-release",
+    "publish": "npm run publish:rimuru && npm run publish:shion",
     "publish:shion": "cd ./src/packages/shion && npm run publish",
     "publish:rimuru": "cd ./src/packages/rimuru && npm run publish"
   },
@@ -56,7 +56,7 @@
     "rollup-plugin-dts": "4.2.1",
     "rollup-plugin-size": "0.2.2",
     "rollup-plugin-terser": "7.0.2",
-    "semantic-release": "19.0.2",
+    "semantic-release": "^19.0.2",
     "typescript": "4.6.3",
     "vite": "2.9.5",
     "vite-plugin-checker": "0.4.6",
