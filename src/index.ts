@@ -1,4 +1,4 @@
-import { isRimuruTheBest } from 'src/lib/isRimuruTheBest'
+import { isRimuruTheBest } from 'src/packages/rimuru/isRimuruTheBest'
 
 export {
 	isRimuruTheBest

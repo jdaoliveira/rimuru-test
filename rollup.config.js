@@ -2,6 +2,7 @@ import { babel } from "@rollup/plugin-babel";
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import dts from "rollup-plugin-dts";
+import fs from "fs";
 import size from 'rollup-plugin-size';
 import { terser } from "rollup-plugin-terser";
 import { name, author, license } from './package.json';
@@ -37,7 +38,13 @@ const getPackage = (
 	OUTPUT_DIR,
 	PACKAGE_JSON
 ) => {
-	const { name, author, license } = require(PACKAGE_JSON);
+	const packageJSON = require(PACKAGE_JSON);
+
+	packageJSON.version = VERSION;
+
+	fs.writeFileSync(PACKAGE_JSON, JSON.stringify(packageJSON, null, 4), 'utf-8');
+
+	const { name, author, license } = packageJSON;
 
 	function getName() {
 		const arr = name.split('/');
