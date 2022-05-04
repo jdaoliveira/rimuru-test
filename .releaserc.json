@@ -15,9 +15,15 @@
 		}
     ],
 	[
-        "@semantic-release/exec",
+        "@semantic-release/npm",
 		{
-			"prepareCmd": "npm run publish"
+			"pkgRoot": "./src/packages/rimuru"
+		}
+    ],
+	[
+        "@semantic-release/npm",
+		{
+			"pkgRoot": "./src/packages/shion"
 		}
     ],
 	"@semantic-release/github",
